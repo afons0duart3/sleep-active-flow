@@ -35,7 +35,7 @@ const HeroSection = () => (
         <span className="text-gradient-cyan">enquanto dormes.</span>
       </h1>
 
-      <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-xl leading-relaxed" style={{ animationDelay: "0.2s", opacity: 0 }} className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-xl leading-relaxed animate-slide-up [animation-delay:200ms]">
+      <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-xl leading-relaxed animate-slide-up [animation-delay:200ms]">
         Sleep tech, mobilidade e recovery de elite — sem roubar tempo ao teu dia.
       </p>
 
