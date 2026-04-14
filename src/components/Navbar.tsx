@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import strexLogo from "@/assets/strex-logo-new.jpeg";
+import strexLogo from "@/assets/strex-logo-clean.png";
 
 const navLinks = [
   { label: "Como Funciona", path: "/como-funciona" },
