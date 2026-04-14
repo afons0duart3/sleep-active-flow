@@ -2,16 +2,13 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import strexLogo from "@/assets/strex-logo-new.jpeg";
 
 const navLinks = [
-  { label: "Home", path: "/" },
   { label: "Como Funciona", path: "/como-funciona" },
   { label: "Produto", path: "/produto" },
-  { label: "App & Subscrição", path: "/app" },
   { label: "Ciência", path: "/ciencia" },
-  { label: "Para Quem", path: "/para-quem" },
   { label: "FAQ", path: "/faq" },
-  { label: "Blog", path: "/blog" },
   { label: "Contacto", path: "/contacto" },
 ];
 
@@ -22,12 +19,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between lg:h-20">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-bold tracking-wider text-foreground">
-          <span className="text-gradient-cyan">⚡</span> STREX
+        <Link to="/" className="flex items-center gap-2">
+          <img src={strexLogo} alt="STREX" className="h-8 lg:h-10 w-auto rounded" />
         </Link>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="hidden items-center gap-8 lg:flex">
           {navLinks.map((l) => (
             <Link
               key={l.path}
@@ -44,7 +41,7 @@ const Navbar = () => {
         <div className="hidden lg:block">
           <Link to="/contacto">
             <Button variant="default" size="sm" className="glow-cyan font-display font-semibold">
-              Acesso Antecipado
+              Entrar na Lista de Espera
             </Button>
           </Link>
         </div>
@@ -73,7 +70,7 @@ const Navbar = () => {
             ))}
             <Link to="/contacto" onClick={() => setOpen(false)}>
               <Button variant="default" size="sm" className="w-full glow-cyan font-display font-semibold mt-2">
-                Acesso Antecipado
+                Entrar na Lista de Espera
               </Button>
             </Link>
           </div>

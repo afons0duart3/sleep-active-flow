@@ -11,20 +11,19 @@ const CTASection = () => {
   };
 
   return (
-    <section className="py-24 md:py-32">
+    <section className="py-24 md:py-32 bg-gradient-section">
       <div className="container">
-        <div className="relative mx-auto max-w-3xl rounded-3xl border border-primary/30 bg-card p-10 md:p-16 text-center overflow-hidden">
-          {/* Glow effect */}
+        <div className="relative mx-auto max-w-2xl rounded-3xl border border-primary/20 bg-card p-10 md:p-14 text-center overflow-hidden">
           <div className="absolute -top-20 left-1/2 -translate-x-1/2 h-40 w-80 rounded-full bg-primary/10 blur-3xl" />
 
           <div className="relative z-10">
             <span className="inline-block mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary font-display">
               Produção Limitada
             </span>
-            <h2 className="font-display text-3xl font-bold text-foreground md:text-4xl">
-              Entra na lista STREX Core.
+            <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
+              Entra na lista de espera.
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-3 text-sm text-muted-foreground">
               Primeira produção limitada. Garante o teu acesso antes de todos.
             </p>
 
@@ -36,7 +35,7 @@ const CTASection = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="O teu email"
-                  className="h-12 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-80"
+                  className="h-12 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-72"
                 />
                 <Button type="submit" size="lg" className="glow-cyan font-display font-semibold">
                   Entrar na lista
@@ -44,7 +43,7 @@ const CTASection = () => {
               </form>
             ) : (
               <div className="mt-8 rounded-lg border border-primary/30 bg-primary/10 p-4">
-                <p className="text-primary font-display font-semibold">✓ Estás na lista! Vamos contactar-te em breve.</p>
+                <p className="text-primary font-display font-semibold text-sm">✓ Estás na lista! Vamos contactar-te em breve.</p>
               </div>
             )}
           </div>
