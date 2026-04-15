@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="grid gap-12 md:grid-cols-4">
         <div>
           <Link to="/" className="inline-block mb-4">
-            <img src={strexLogo} alt="STREX" className="h-8 w-auto rounded" />
+            <img src={strexLogo} alt="STREX" className="h-12 w-auto" />
           </Link>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Fato inteligente que melhora recuperação e mobilidade enquanto dormes.
