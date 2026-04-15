@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import strexLogo from "@/assets/strex-logo-clean.png";
 
 const navLinks = [
-  { label: "Produto & Como Funciona", path: "/produto" },
+  { label: "Produto", path: "/produto" },
   { label: "Ciência", path: "/ciencia" },
   { label: "FAQ", path: "/faq" },
   { label: "Contacto", path: "/contacto" },
