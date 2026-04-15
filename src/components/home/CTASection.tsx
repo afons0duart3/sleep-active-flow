@@ -18,13 +18,13 @@ const CTASection = () => {
 
           <div className="relative z-10">
             <span className="inline-block mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary font-display">
-              Produção Limitada
+              Acesso Antecipado · Vagas Limitadas
             </span>
             <h2 className="font-display text-2xl font-bold text-foreground md:text-3xl">
-              Entra na lista de espera.
+              Faz parte da comunidade fundadora.
             </h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              Primeira produção limitada. Garante o teu acesso antes de todos.
+            <p className="mt-3 text-sm text-muted-foreground max-w-lg mx-auto">
+              STREX é um sistema inteligente de recuperação e mobilidade durante o sono, com foco em conforto, personalização e performance. Garante o teu lugar.
             </p>
 
             {!submitted ? (
@@ -38,7 +38,7 @@ const CTASection = () => {
                   className="h-12 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 sm:w-72"
                 />
                 <Button type="submit" size="lg" className="glow-cyan font-display font-semibold">
-                  Entrar na lista
+                  Pedir Acesso Antecipado
                 </Button>
               </form>
             ) : (
@@ -46,6 +46,10 @@ const CTASection = () => {
                 <p className="text-primary font-display font-semibold text-sm">✓ Estás na lista! Vamos contactar-te em breve.</p>
               </div>
             )}
+
+            <p className="mt-4 text-xs text-muted-foreground/60">
+              Early access com benefícios exclusivos para os primeiros membros.
+            </p>
           </div>
         </div>
       </div>
