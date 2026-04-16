@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, LogIn, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/contexts/AuthContext";
 import strexLogo from "@/assets/strex-logo-clean.png";
 
 const navLinks = [
@@ -29,6 +30,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const { user, signOut } = useAuth();
 
   const results = query.trim()
     ? searchablePages.filter(
@@ -139,11 +141,19 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:block">
-          <Link to="/contacto">
-            <Button variant="default" size="sm" className="glow-cyan font-display font-semibold">
-              Entrar na Lista de Espera
+          {user ? (
+            <Button variant="outline" size="sm" className="font-display font-semibold border-primary/30" onClick={signOut}>
+              <LogOut className="h-4 w-4 mr-1.5" />
+              Sair
             </Button>
-          </Link>
+          ) : (
+            <Link to="/auth">
+              <Button variant="default" size="sm" className="glow-cyan font-display font-semibold">
+                <LogIn className="h-4 w-4 mr-1.5" />
+                Login
+              </Button>
+            </Link>
+          )}
         </div>
 
         {/* Mobile toggle */}
@@ -190,11 +200,19 @@ const Navbar = () => {
                 {l.label}
               </Link>
             ))}
-            <Link to="/contacto" onClick={() => setOpen(false)}>
-              <Button variant="default" size="sm" className="w-full glow-cyan font-display font-semibold mt-2">
-                Entrar na Lista de Espera
+            {user ? (
+              <Button variant="outline" size="sm" className="w-full font-display font-semibold border-primary/30 mt-2" onClick={() => { signOut(); setOpen(false); }}>
+                <LogOut className="h-4 w-4 mr-1.5" />
+                Sair
               </Button>
-            </Link>
+            ) : (
+              <Link to="/auth" onClick={() => setOpen(false)}>
+                <Button variant="default" size="sm" className="w-full glow-cyan font-display font-semibold mt-2">
+                  <LogIn className="h-4 w-4 mr-1.5" />
+                  Login
+                </Button>
+              </Link>
+            )}
           </div>
         </div>
       )}
