@@ -4,7 +4,6 @@ import { Menu, X, Search, LogIn, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import strexLogo from "@/assets/strex-logo-clean.png";
-import strexLogo from "@/assets/strex-logo-clean.png";
 
 const navLinks = [
   { label: "Produto", path: "/produto" },
